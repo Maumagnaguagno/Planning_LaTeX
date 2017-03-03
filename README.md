@@ -1,4 +1,4 @@
-# Planning LaTeZ
+# Planning LaTeX
 **Latex listing for planning formalisms**
 
 Add PDDL and JSHOP snippets to your Tex files by making a copy of each listing configuration file to your LaTeX project.
