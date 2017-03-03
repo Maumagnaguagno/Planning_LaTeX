@@ -1,0 +1,16 @@
+\lstdefinelanguage{PDDL}
+{
+  sensitive=false,    % not case-sensitive
+  morecomment=[l]{;}, % line comment
+  alsoletter={:,?,-}, % consider extra characters
+  keywords={
+    define,domain,problem,:domain,:extends,:requirements,:strips,
+    :equality,:typing,:conditional-effects,:types,:objects,
+    :negative-preconditions,:disjunctive-preconditions,
+    :existential-preconditions,:universal-preconditions,
+    :constants,:domain-variables,:timeless,:domain-axioms,
+    :action-expansions,:predicates,:action,:parameters,:precondition,
+    :effect,:fluents,:primary-effect,:side-effect,:init,:goal,
+    not,and,or,when,forall,exists,goal-type,choice,forsome,in-context
+  }
+}
