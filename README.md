@@ -2,6 +2,7 @@
 **Latex listing for planning formalisms**
 
 Add PDDL, JSHOP and HDDL snippets to your Tex files by making a copy of each listing configuration file to your LaTeX project.
+An example is available on [Overleaf](https://www.overleaf.com/read/dntpdgmtpwxr).
 
 ```tex
 \usepackage{listings}
@@ -10,23 +11,23 @@ Add PDDL, JSHOP and HDDL snippets to your Tex files by making a copy of each lis
 \input{HDDL}
 
 \begin{lstlisting}[
-  float=!tb,
-  caption={Move operator.},
-  label={lst:pddlmove},
+  float=!htb,
+  caption={PDDL move operator.},
+  label={lst:pddl},
   language=PDDL]
 (:action move
   :parameters (
-    ?bot - robot
-    ?source ?destination - hallway
+    ?agent - agent
+    ?from ?to - hallway ; Both ?from and ?to are hallways
   )
   :precondition (and
-    (at ?bot ?source)
-    (not (at ?bot ?destination))
-    (connected ?source ?destination)
+    (at ?agent ?from)
+    (not (at ?agent ?to))
+    (adjacent ?from ?to)
   )
   :effect (and
-    (not (at ?bot ?source))
-    (at ?bot ?destination)
+    (not (at ?agent ?from)) ; This line is usually forgotten
+    (at ?agent ?to)
   )
 )
 \end{lstlisting}
