@@ -1,12 +1,13 @@
 # Planning LaTeX
 **Latex listing for planning formalisms**
 
-Add PDDL and JSHOP snippets to your Tex files by making a copy of each listing configuration file to your LaTeX project.
+Add PDDL, JSHOP and HDDL snippets to your Tex files by making a copy of each listing configuration file to your LaTeX project.
 
 ```tex
 \usepackage{listings}
 \input{PDDL}
 \input{JSHOP}
+\input{HDDL}
 
 \begin{lstlisting}[
   float=!tb,
